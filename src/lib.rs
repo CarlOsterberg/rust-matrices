@@ -1,6 +1,7 @@
+#![no_std]
 
-use std::fmt;
-use std::ops::*;
+use core::fmt;
+use core::ops::*;
 
 pub trait Numeric:
     Add<Output = Self>
