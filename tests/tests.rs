@@ -132,4 +132,20 @@ mod tests {
         assert_eq!(d * c, f);
         assert_ne!(c * d, f);
     }
+
+    #[test]
+    fn get() {
+
+        let a = Matrix::from_array([
+            [2, 3, 4],
+            [1, 0, 0],
+        ]);
+
+        assert_eq!(a.get(0, 0), 2);
+        assert_eq!(a.get(0, 1), 3);
+        assert_eq!(a.get(0, 2), 4);
+        assert_eq!(a.get(1, 0), 1);
+        assert_eq!(a.get(1, 1), 0);
+        assert_eq!(a.get(1, 2), 0);
+    }
 }

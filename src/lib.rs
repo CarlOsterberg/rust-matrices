@@ -53,6 +53,10 @@ impl<T: Numeric, const M: usize, const N: usize> Matrix<T, M, N> {
         }
         Matrix { array }
     }
+    
+    pub fn get(&self, m: usize, n: usize) -> T {
+        self.array[m][n]
+    }
 }
 
 impl<T: Numeric, const M: usize, const N: usize> PartialEq for Matrix<T, M, N> {
